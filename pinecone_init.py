@@ -2,10 +2,12 @@ import os
 from pinecone import Pinecone, ServerlessSpec
 from dotenv import load_dotenv
 
+# Load environment variables from .env
 load_dotenv()
 
 
 def init_pinecone():
+    """Initializes the Pinecone index with the correct settings."""
     api_key = os.getenv("PINECONE_API_KEY")
     index_name = os.getenv("PINECONE_INDEX_NAME", "multimodal-rag-index")
 
@@ -29,7 +31,7 @@ def init_pinecone():
             pc.delete_index(index_name)
             import time
 
-            time.sleep(5)  # Wait for deletion
+            time.sleep(5)  # Wait for deletion on server
         else:
             print(f"Index {index_name} already exists with correct dimension (3072).")
             return
