@@ -1,0 +1,7 @@
+google-genai
+pinecone
+python-dotenv
+PyPDF2
+opencv-python
+pillow
+unstructured

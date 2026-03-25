@@ -1,0 +1,2 @@
+Este é um arquivo de exemplo para testar o seu sistema RAG Multimodal.
+O Gemini agora consegue ler textos, imagens e vídeos em um único banco de dados Pinecone!
